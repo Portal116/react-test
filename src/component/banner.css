@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+  width: 1080px;
+  height: 298px;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.ico{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+img.ico_allergy {
+  width: 65px;
+  height: 65px;
+  margin: 0;
+  object-fit: contain;
+}
+img.ico_lan_eng {
+  width: 65px;
+  height: 65px;
+  margin: 0 0 0 15px;
+  object-fit: contain;
+}
+img.ico_gohome {
+  width: 65px;
+  height: 65px;
+  margin: 0 0 0 15px;
+  object-fit: contain;
+}

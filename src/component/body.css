@@ -1,0 +1,16 @@
+.__ {
+  width: 1080px;
+  height: 1920px;
+  background-color: #fff;
+}
+img.img_bar_yellow {
+  position: absolute;
+  margin: 12px 56px 56px 54px;
+  object-fit: contain;
+}
+.line_divide {
+  width: 1080px;
+  height: 4px;
+  margin: 16px 0 60px;
+  background-color: #008938;
+}
