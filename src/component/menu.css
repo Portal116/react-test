@@ -1,41 +1,79 @@
+.container_menu {
+    position: relative;
+    display: flex;
+    width: 1080px;
+    height: 156px;
+    padding: 0 0;
+    overflow-y: visible;
+    overflow-x: scroll;
+}
+::-webkit-scrollbar { display: none; }
+
+.div_promotion{
+    width: 98px;
+    height: 122px;
+    margin: 18px 0 16px 65px;
+}
+.div_morning{
+    width: 98px;
+    margin: 18px 0 16px 67px;
+}
+.div_sandwich{
+    width: 98px;
+    margin: 18px 0 16px 67px;
+}
+.div_salade{
+    width: 98px;
+    margin: 18px 0 16px 67px;
+}
+.div_wrap{
+    width: 98px;
+    margin: 18px 0 16px 65px;
+}
+.div_side{
+    width: 128px;
+    margin: 18px 0 16px 60px;
+}
+
+.container_menu img{
+    margin-bottom: 17px;
+    text-align: center;
+    display: block;
+}
 img.ico_promotion {
     width: 98px;
     height: 72px;
-    margin: 18px 0 17px 65px;
     object-fit: contain;
 }
 img.ico_morning {
     width: 98px;
     height: 72px;
-    margin: 18px 0 17px 67px;
     object-fit: contain;
 }
 img.ico_sandwich {
     width: 98px;
     height: 72px;
-    margin: 18px 0 17px 67px;
     object-fit: contain;
 }
 img.ico_salade {
     width: 98px;
     height: 72px;
-    margin: 18px 0 17px 67px;
     object-fit: contain;
 }
 img.ico_wrap {
     width: 98px;
     height: 72px;
-    margin: 18px 0 17px 65px;
     object-fit: contain;
 }
 img.ico_side {
     width: 98px;
     height: 72px;
-    margin: 18px 86px 17px 75px;
+    margin-left: 15px;
+    margin-right: 15px;
     object-fit: contain;
 }
 
-span {
+.container_menu span {
     font-family: 'S-CoreDream-7';
     font-size: 24px;
     font-weight: 800;
@@ -44,40 +82,49 @@ span {
     line-height: 1.38;
     letter-spacing: normal;
     text-align: left;
+    color: #000;
 }
 .span_promotion{
     width: 92px;
     height: 33px;
-    margin: 0 0 12px 67px;
-    color: #008938;
+    margin-left: 2px;
 }
 .span_morning{
     width: 92px;
     height: 33px;
-    margin: 0 0 12px 73px;
-    color: #000;
+    margin-left: 2px;
 }
 .span_sandwich{
     width: 92px;
     height: 33px;
-    margin: 0 0 12px 73px;
-    color: #000;
+    margin-left: 2px;
 }
 .span_salade{
     width: 92px;
     height: 33px;
-    margin: 0 0 12px 73px;
-    color: #000;
+    margin-left: 2px;
 }
 .span_wrap{
     width: 82px;
     height: 33px;
-    margin: 0 0 12px 78px;
-    color: #000;
+    margin-left: 9px;
 }
 .span_side{
     width: 128px;
     height: 33px;
-    margin: 0 70px 12px 67px;
-    color: #000;
+}
+.selected_menu{
+    color: #008938;
+}
+
+img#img_bar_yellow {
+    margin-top: 12px;
+    object-fit: contain;
+    z-index: 2;
+}
+.line_divide {
+    width: 1080px;
+    height: 4px;
+    background-color: #008938;
+    z-index: 1;
 }

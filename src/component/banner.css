@@ -1,16 +1,10 @@
-.container {
+.container_banner {
   position: relative;
   width: 1080px;
   height: 298px;
 }
 
-/* Make the image responsive */
-.container img {
-  width: 100%;
-  height: auto;
-}
-
-.ico{
+.container_banner div{
   position: absolute;
   top: 15px;
   right: 15px;
@@ -19,7 +13,7 @@
 img.ico_allergy {
   width: 65px;
   height: 65px;
-  margin: 0;
+  margin: 0 0;
   object-fit: contain;
 }
 img.ico_lan_eng {

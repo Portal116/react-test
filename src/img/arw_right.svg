@@ -1,0 +1,27 @@
+<svg id="arw_right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="68" viewBox="0 0 40 68">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e6e6e6;
+        opacity: 0.72;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #f2b700;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="사각형_504" data-name="사각형 504" class="cls-1" width="40" height="68" transform="translate(963 943) rotate(180)"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_28" data-name="마스크 그룹 28" class="cls-2" transform="translate(-923 -875)">
+    <g id="그룹_2716" data-name="그룹 2716">
+      <rect id="사각형_505" data-name="사각형 505" class="cls-3" width="10" height="50" rx="5" transform="translate(921.929 880.716) rotate(-45)"/>
+      <rect id="사각형_506" data-name="사각형 506" class="cls-3" width="10" height="50" rx="5" transform="translate(957.285 901.929) rotate(45)"/>
+    </g>
+  </g>
+</svg>

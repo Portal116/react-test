@@ -1,42 +1,48 @@
 import React from "react";
-import img_top_banner from "../img/img_top_banner.png";
-import ico_allergy from "../img/ico_allergy.svg";
-import ico_lan_eng from "../img/ico_lan_eng.png";
-import ico_gohome from "../img/ico_gohome.svg";
+import Img_top_banner from "../img/img_top_banner.png";
+import Ico_allergy from "../img/ico_allergy.svg";
+import Ico_lan_eng from "../img/ico_lan_eng.png";
+import Ico_gohome from "../img/ico_gohome.svg";
 import "./banner.css";
 
 const banner = () => {
+  const banner_data = [
+    {
+      image: Ico_allergy,
+      class: "ico_allergy",
+      name: "allergy",
+    },
+    {
+      image: Ico_lan_eng,
+      class: "ico_lan_eng",
+      name: "ENG",
+    },
+    {
+      image: Ico_gohome,
+      class: "ico_gohome",
+      name: "gohome",
+    },
+  ];
   const imageClick = (e) => {
-    console.log("Click" + e);
+    console.log("Click " + e);
   };
   return (
-    <div className="container">
+    <div className="container_banner">
       <img
-        src={img_top_banner}
+        src={Img_top_banner}
         alt="img_top_banner"
         onClick={() => imageClick("banner")}
       />
-      <div class="ico">
-        <img
-          src={ico_allergy}
-          class="ico_allergy"
-          alt="ico_allergy"
-          onClick={() => imageClick("allergy")}
-        />
-        <img
-          src={ico_lan_eng}
-          srcset="img/ico-allergy@2x.png 2x,
-             img/ico-allergy@3x.png 3x"
-          class="ico_lan_eng"
-          alt="ico_lan_eng"
-          onClick={() => imageClick("ENG")}
-        />
-        <img
-          src={ico_gohome}
-          class="ico_gohome"
-          alt="ico_gohome"
-          onClick={() => imageClick("home")}
-        />
+      <div>
+        {banner_data.map((data, index) => (
+          <img
+            key={index}
+            src={data.image}
+            class={data.class}
+            alt={data.class}
+            onClick={() => imageClick(`${data.name}image`)}
+          />
+        ))}
       </div>
     </div>
   );

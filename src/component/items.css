@@ -1,0 +1,96 @@
+.container_items {
+    position: relative;
+    display: flex;
+    width: 1080px;
+    height: 992px;
+    padding: 60px 75px;
+}
+
+img.img_com_tuna {
+    width: 250px;
+    height: 140px;
+    object-fit: contain;
+  }
+  img.img_com_tunabacon {
+    width: 250px;
+    height: 140px;
+    object-fit: contain;
+  }
+  img.img_com_tunaavocado {
+    width: 250px;
+    height: 140px;
+    object-fit: contain;
+  }
+
+  .container_items .item {
+      width: 250px;
+      margin-left: 45px;
+
+  }
+  .container_items .name {
+    height: 29px;
+    margin-top: 5px;
+    font-family: S-CoreDream-6;
+    font-size: 21px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: center;
+    color: #333;
+  }
+  .container_items .ingredient {
+    height: 21px;
+    margin-top: 5px;
+    font-family: S-CoreDream-4;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: -0.75px;
+    text-align: center;
+    color: #b6b6b6;
+  }
+  .container_items .price {
+    height: 37px;
+    margin-top: 5px;
+    font-family: SubwaySansLCG;
+    font-size: 28px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    text-align: center;
+    color: #008938;
+  }
+  .container_items .date {
+    height: 36px;
+    margin-top: 5px;
+    font-family: SubwaySansLCG;
+    font-size: 27px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ff5c39;
+  }
+
+  img.arw_left {
+    position: absolute;
+    width: 40px;
+    height: 68px;
+    margin: 462px 0 462px -35px;
+    object-fit: contain;
+  }
+  img.arw_right {
+    position: absolute;
+    width: 40px;
+    height: 68px;
+    margin: 462px 0 462px 925px;
+    object-fit: contain;
+  }
