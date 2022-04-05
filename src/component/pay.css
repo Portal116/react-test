@@ -4,9 +4,90 @@
     height: 470px;
 }
 .pay_price {
+    display: flex;
     width: 1080px;
     height: 100px;
     background-color: #333;
+}
+.pay_price .cancel_all{
+    position: absolute;
+    width: 108px;
+    height: 39px;
+    margin-top: 31px;
+    margin-left: 25px;
+    font-family: S-CoreDream-6;
+    font-size: 28px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.39;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fce300;
+}
+.pay_price .order_amount {
+    position: absolute;
+    width: 96px;
+    height: 35px;
+    margin-top: 32px;
+    margin-left: 549px;
+    font-family: S-CoreDream-5;
+    font-size: 25px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #eee;
+  }
+  .pay_price .order_amount_value {
+    position: absolute;
+    width: 26px;
+    height: 67px;
+    margin-top: 16px;
+    margin-left: 665px;
+    font-family: SubwaySansLCG;
+    font-size: 50px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.34;
+    letter-spacing: -1.5px;
+    text-align: right;
+    color: #fce300;
+  }
+  .pay_price .order_price {
+    position: absolute;
+    width: 96px;
+    height: 35px;
+    margin-top: 32px;
+    margin-left: 761px;
+    font-family: S-CoreDream-5;
+    font-size: 25px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #eee;
+  }
+  .pay_price .order_price_value {
+    position: absolute;
+    width: 160px;
+    height: 67px;
+    margin-top: 16px;
+    margin-left: 877px;
+    font-family: SubwaySansLCG;
+    font-size: 50px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.34;
+    letter-spacing: normal;
+    text-align: right;
+    color: #fce300;
   }
 .pay_bottom{
     display: flex;
@@ -17,7 +98,32 @@
     background-color: #000;
 }
 .pay_pay {
+    display: flex;
     width: 180px;
     height: 370px;
     background-color: #f2b700;
 }
+img.ico_credit {
+    position: absolute;
+    width: 81px;
+    height: 58px;
+    margin-top: 110px;
+    margin-left: 50px;
+    object-fit: contain;
+  }
+  .pay_pay_name {
+    position: absolute;
+    width: 118px;
+    height: 44px;
+    margin-top: 178px;
+    margin-left: 31px;
+    font-family: S-CoreDream-6;
+    font-size: 32px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: -1.5px;
+    text-align: left;
+    color: #000;
+  }

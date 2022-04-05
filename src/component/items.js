@@ -8,10 +8,12 @@ import Arw_left from "../img/arw_left.svg";
 import Arw_left_yellow from "../img/arw_left_yellow.svg";
 import Arw_right from "../img/arw_right.svg";
 import Arw_right_yellow from "../img/arw_right_yellow.svg";
+import Pay from "./Pay";
 
 const Items = () => {
   const [index, setIndex] = useState(0);
   const [itemsCount, setItemsCount] = useState(0);
+  const [selected, setSelected] = useState("");
   const items_data = [
     {
       image: Img_com_tuna,
@@ -38,9 +40,9 @@ const Items = () => {
       date: "09.01 ~ 10.31",
     },
   ];
-  const imageClick = (e) => {
-    console.log("Click " + e);
-  };
+  // const imageClick = (e) => {
+  //   console.log("Click " + e);
+  // };
   return (
     <div>
       <Menu
@@ -52,10 +54,7 @@ const Items = () => {
       <div className="container_items">
         {items_data.map((data, index) => (
           <div className="item" key={index}>
-            <div
-              className={data.div_class}
-              onClick={() => imageClick(`${data.name}`)}
-            >
+            <div className={data.div_class} onClick={() => setSelected(data)}>
               <div>
                 <img
                   src={data.image}
@@ -86,6 +85,7 @@ const Items = () => {
           onClick={() => (index === itemsCount - 1 ? "" : setIndex(index + 1))}
         ></img>
       </div>
+      <Pay addSelected={selected} setSelected={setSelected} />
     </div>
   );
 };

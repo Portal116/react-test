@@ -14,11 +14,16 @@ const Menu = (props) => {
     props.setItemsCount(menu_data.length);
   }, []);
   useEffect(() => {
+    if (props.changedIndex == 6 && selected == 5) {
+      document.getElementsByClassName("container_menu")[0].scrollLeft = 117;
+    } else if (props.changedIndex == 0 && selected == 1) {
+      document.getElementsByClassName("container_menu")[0].scrollLeft = 0;
+    }
     setSelected(props.changedIndex);
   }, [props.changedIndex]);
   useEffect(() => {
-    document.getElementsByClassName("container_menu")[0].scrollLeft =
-      menu_data.length / 2 <= selected ? 117 : 0;
+    // document.getElementsByClassName("container_menu")[0].scrollLeft =
+    //   menu_data.length / 2 <= selected ? 117 : 0;
     props.setIndex(selected);
   }, [selected]);
   const menu_data = [
