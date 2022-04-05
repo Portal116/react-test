@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Menu.css";
+import "./Menu.scss";
 import Ico_promotion from "../img/ico_promotion.svg";
 import Ico_morning from "../img/ico_morning.svg";
 import Ico_sandwich from "../img/ico_sandwich.svg";
@@ -14,16 +14,16 @@ const Menu = (props) => {
     props.setItemsCount(menu_data.length);
   }, []);
   useEffect(() => {
-    if (props.changedIndex == 6 && selected == 5) {
-      document.getElementsByClassName("container_menu")[0].scrollLeft = 117;
-    } else if (props.changedIndex == 0 && selected == 1) {
-      document.getElementsByClassName("container_menu")[0].scrollLeft = 0;
-    }
     setSelected(props.changedIndex);
   }, [props.changedIndex]);
   useEffect(() => {
     // document.getElementsByClassName("container_menu")[0].scrollLeft =
     //   menu_data.length / 2 <= selected ? 117 : 0;
+    if (selected == 6) {
+      document.getElementsByClassName("container_menu")[0].scrollLeft = 117;
+    } else if (selected == 0) {
+      document.getElementsByClassName("container_menu")[0].scrollLeft = 0;
+    }
     props.setIndex(selected);
   }, [selected]);
   const menu_data = [

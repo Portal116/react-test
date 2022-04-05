@@ -3,7 +3,7 @@ import Img_top_banner from "../img/img_top_banner.png";
 import Ico_allergy from "../img/ico_allergy.svg";
 import Ico_lan_eng from "../img/ico_lan_eng.png";
 import Ico_gohome from "../img/ico_gohome.svg";
-import "./Banner.css";
+import "./Banner.scss";
 
 const Banner = () => {
   const banner_data = [

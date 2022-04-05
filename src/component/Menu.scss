@@ -1,0 +1,139 @@
+.container_menu {
+    position: relative;
+    display: flex;
+    width: 1080px;
+    height: 164px;
+    padding: 0 0;
+    overflow-x: scroll;
+    overflow-y: visible;
+
+    .div_promotion {
+        width: 98px;
+        height: 138px;
+        margin: 18px 0 0 65px;
+    }
+    .div_morning {
+        width: 98px;
+        height: 138px;
+        margin: 18px 0 0 67px;
+    }
+    .div_sandwich {
+        width: 98px;
+        height: 138px;
+        margin: 18px 0 0 67px;
+    }
+    .div_salade {
+        width: 98px;
+        height: 138px;
+        margin: 18px 0 0 67px;
+    }
+    .div_wrap {
+        width: 98px;
+        height: 138px;
+        margin: 18px 0 0 65px;
+    }
+    .div_side {
+        width: 128px;
+        height: 138px;
+        margin: 18px 0 0 60px;
+    }
+    .div_side2 {
+        width: 128px;
+        height: 138px;
+        margin: 18px 0 0 60px;
+    }
+
+    img {
+        margin-bottom: 17px;
+        text-align: center;
+        display: block;
+    }
+    img.ico_promotion {
+        width: 98px;
+        height: 72px;
+        object-fit: contain;
+    }
+    img.ico_morning {
+        width: 98px;
+        height: 72px;
+        object-fit: contain;
+    }
+    img.ico_sandwich {
+        width: 98px;
+        height: 72px;
+        object-fit: contain;
+    }
+    img.ico_salade {
+        width: 98px;
+        height: 72px;
+        object-fit: contain;
+    }
+    img.ico_wrap {
+        width: 98px;
+        height: 72px;
+        object-fit: contain;
+    }
+    img.ico_side {
+        width: 98px;
+        height: 72px;
+        margin-left: 15px;
+        margin-right: 15px;
+        object-fit: contain;
+    }
+
+    span {
+        font-family: "S-CoreDream-7";
+        font-size: 24px;
+        font-weight: 800;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: normal;
+        text-align: left;
+        color: #000;
+    }
+    .span_promotion {
+        width: 92px;
+        height: 33px;
+        margin-left: 2px;
+    }
+    .span_morning {
+        width: 92px;
+        height: 33px;
+        margin-left: 2px;
+    }
+    .span_sandwich {
+        width: 92px;
+        height: 33px;
+        margin-left: 2px;
+    }
+    .span_salade {
+        width: 92px;
+        height: 33px;
+        margin-left: 2px;
+    }
+    .span_wrap {
+        width: 82px;
+        height: 33px;
+        margin-left: 9px;
+    }
+    .span_side {
+        width: 128px;
+        height: 33px;
+    }
+
+    .selected_menu {
+        color: #008938;
+    }
+
+    .yellow_bar_div {
+        margin-top: 12px;
+    }
+    #img_bar_yellow {
+        margin: 0 0;
+        object-fit: contain;
+    }
+}
+::-webkit-scrollbar {
+    display: none;
+}

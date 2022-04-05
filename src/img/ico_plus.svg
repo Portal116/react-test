@@ -1,0 +1,15 @@
+<svg id="구성_요소_38" data-name="구성 요소 38" xmlns="http://www.w3.org/2000/svg" width="75" height="50" viewBox="0 0 75 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+      }
+
+      .cls-2 {
+        fill: #f2b700;
+      }
+    </style>
+  </defs>
+  <path id="패스_875" data-name="패스 875" class="cls-1" d="M6,0H69a6,6,0,0,1,6,6V44a6,6,0,0,1-6,6H6a6,6,0,0,1-6-6V6A6,6,0,0,1,6,0Z"/>
+  <path id="합치기_22" data-name="합치기 22" class="cls-2" d="M11,22V14H3a2,2,0,0,1,0-4h8V2a2,2,0,0,1,4,0v8h8a2,2,0,0,1,0,4H15v8a2,2,0,1,1-4,0Z" transform="translate(25 13)"/>
+</svg>

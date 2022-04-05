@@ -1,0 +1,28 @@
+.container_banner {
+  position: relative;
+  width: 1080px;
+  height: 298px;
+  div {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .ico_allergy {
+    width: 65px;
+    height: 65px;
+    margin: 0 0;
+    object-fit: contain;
+  }
+  .ico_lan_eng {
+    width: 65px;
+    height: 65px;
+    margin: 0 0 0 15px;
+    object-fit: contain;
+  }
+  .ico_gohome {
+    width: 65px;
+    height: 65px;
+    margin: 0 0 0 15px;
+    object-fit: contain;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Body.css";
+import "./Body.scss";
 import Banner from "./Banner";
 import Items from "./Items";
 

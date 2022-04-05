@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Items.css";
+import "./Items.scss";
 import Menu from "./Menu";
 import Img_com_tuna from "../img/img_com_tuna.png";
 import Img_com_tunaavocado from "../img/img_com_tunaavocado.png";
