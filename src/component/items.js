@@ -1,12 +1,17 @@
-import React from "react";
-import "./items.css";
+import React, { useState } from "react";
+import "./Items.css";
+import Menu from "./Menu";
 import Img_com_tuna from "../img/img_com_tuna.png";
 import Img_com_tunaavocado from "../img/img_com_tunaavocado.png";
 import Img_com_tunabacon from "../img/img_com_tunabacon.png";
 import Arw_left from "../img/arw_left.svg";
+import Arw_left_yellow from "../img/arw_left_yellow.svg";
 import Arw_right from "../img/arw_right.svg";
+import Arw_right_yellow from "../img/arw_right_yellow.svg";
 
-const items = () => {
+const Items = () => {
+  const [index, setIndex] = useState(0);
+  const [itemsCount, setItemsCount] = useState(0);
   const items_data = [
     {
       image: Img_com_tuna,
@@ -37,31 +42,52 @@ const items = () => {
     console.log("Click " + e);
   };
   return (
-    <div class="container_items">
-      {items_data.map((data, index) => (
-        <div class="item">
-          <div
-            key={index}
-            className={data.div_class}
-            onClick={() => imageClick(`${data.name}`)}
-          >
-            <div>
-              <img src={data.image} class={data.class} alt={data.class}></img>
+    <div>
+      <Menu
+        changedIndex={index}
+        setIndex={setIndex}
+        setItemsCount={setItemsCount}
+      />
+      <div className="line_divide"></div>
+      <div className="container_items">
+        {items_data.map((data, index) => (
+          <div className="item" key={index}>
+            <div
+              className={data.div_class}
+              onClick={() => imageClick(`${data.name}`)}
+            >
+              <div>
+                <img
+                  src={data.image}
+                  className={data.class}
+                  alt={data.class}
+                ></img>
+              </div>
+              <div className="name">{data.name}</div>
+              <div className="ingredient">{data.ingredient}</div>
+              {/* 숫자 천 단위 콤마 */}
+              <div className="price">
+                {data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              </div>
+              <div className="date">{data.date}</div>
             </div>
-            <div class="name">{data.name}</div>
-            <div class="ingredient">{data.ingredient}</div>
-            {/* 숫자 천 단위 콤마 */}
-            <div class="price">
-              {data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-            </div>
-            <div class="date">{data.date}</div>
           </div>
-        </div>
-      ))}
-      <img src={Arw_left} class="arw_left" alt="arw_left"></img>
-      <img src={Arw_right} class="arw_right" alt="arw_right"></img>
+        ))}
+        <img
+          src={index === 0 ? Arw_left : Arw_left_yellow}
+          className="arw_left"
+          alt="arw_left"
+          onClick={() => (index === 0 ? "" : setIndex(index - 1))}
+        ></img>
+        <img
+          src={index === itemsCount - 1 ? Arw_right : Arw_right_yellow}
+          className="arw_right"
+          alt="arw_right"
+          onClick={() => (index === itemsCount - 1 ? "" : setIndex(index + 1))}
+        ></img>
+      </div>
     </div>
   );
 };
 
-export default items;
+export default Items;

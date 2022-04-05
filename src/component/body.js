@@ -1,22 +1,18 @@
 import React from "react";
-import "./body.css";
-import Banner from "./banner";
-import Menu from "./menu";
-import Items from "./items";
-import Price from "./price";
-import Pay from "./pay";
+import "./Body.css";
+import Banner from "./Banner";
+import Items from "./Items";
+import Pay from "./Pay";
 
-const body = () => {
+const Body = () => {
   return (
-    <div class="__">
-      {/* Banner : 298 / menu : 156 / line : 4 / items : 992 / price : 100 / pay : 370 */}
+    <div className="__">
+      {/* Banner : 298 / menu : 156 / line : 4 / items : 992 / pay : 470 */}
       <Banner />
-      <Menu />
       <Items />
-      <Price />
       <Pay />
     </div>
   );
 };
 
-export default body;
+export default Body;

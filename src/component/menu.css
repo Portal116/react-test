@@ -2,37 +2,47 @@
     position: relative;
     display: flex;
     width: 1080px;
-    height: 156px;
+    height: 164px;
     padding: 0 0;
-    overflow-y: visible;
     overflow-x: scroll;
+    overflow-y: visible;
 }
 ::-webkit-scrollbar { display: none; }
 
 .div_promotion{
     width: 98px;
-    height: 122px;
-    margin: 18px 0 16px 65px;
+    height: 138px;
+    margin: 18px 0 0 65px;
 }
 .div_morning{
     width: 98px;
-    margin: 18px 0 16px 67px;
+    height: 138px;
+    margin: 18px 0 0 67px;
 }
 .div_sandwich{
     width: 98px;
-    margin: 18px 0 16px 67px;
+    height: 138px;
+    margin: 18px 0 0 67px;
 }
 .div_salade{
     width: 98px;
-    margin: 18px 0 16px 67px;
+    height: 138px;
+    margin: 18px 0 0 67px;
 }
 .div_wrap{
     width: 98px;
-    margin: 18px 0 16px 65px;
+    height: 138px;
+    margin: 18px 0 0 65px;
 }
 .div_side{
     width: 128px;
-    margin: 18px 0 16px 60px;
+    height: 138px;
+    margin: 18px 0 0 60px;
+}
+.div_side2{
+    width: 128px;
+    height: 138px;
+    margin: 18px 0 0 60px;
 }
 
 .container_menu img{
@@ -117,14 +127,10 @@ img.ico_side {
     color: #008938;
 }
 
-img#img_bar_yellow {
+.yellow_bar_div{
     margin-top: 12px;
-    object-fit: contain;
-    z-index: 2;
 }
-.line_divide {
-    width: 1080px;
-    height: 4px;
-    background-color: #008938;
-    z-index: 1;
+img#img_bar_yellow {
+    margin: 0 0;
+    object-fit: contain;
 }

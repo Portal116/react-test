@@ -3,9 +3,9 @@ import Img_top_banner from "../img/img_top_banner.png";
 import Ico_allergy from "../img/ico_allergy.svg";
 import Ico_lan_eng from "../img/ico_lan_eng.png";
 import Ico_gohome from "../img/ico_gohome.svg";
-import "./banner.css";
+import "./Banner.css";
 
-const banner = () => {
+const Banner = () => {
   const banner_data = [
     {
       image: Ico_allergy,
@@ -38,7 +38,7 @@ const banner = () => {
           <img
             key={index}
             src={data.image}
-            class={data.class}
+            className={data.class}
             alt={data.class}
             onClick={() => imageClick(`${data.name}image`)}
           />
@@ -48,4 +48,4 @@ const banner = () => {
   );
 };
 
-export default banner;
+export default Banner;

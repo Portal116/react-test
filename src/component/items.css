@@ -2,8 +2,15 @@
     position: relative;
     display: flex;
     width: 1080px;
-    height: 992px;
-    padding: 60px 75px;
+    height: 880px;
+    padding: 56px 75px;
+}
+
+.line_divide {
+  width: 1080px;
+  height: 4px;
+  margin-top: -8px;
+  background-color: #008938;
 }
 
 img.img_com_tuna {

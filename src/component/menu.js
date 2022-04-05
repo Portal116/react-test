@@ -1,5 +1,5 @@
-import React from "react";
-import "./menu.css";
+import React, { useState, useEffect } from "react";
+import "./Menu.css";
 import Ico_promotion from "../img/ico_promotion.svg";
 import Ico_morning from "../img/ico_morning.svg";
 import Ico_sandwich from "../img/ico_sandwich.svg";
@@ -8,7 +8,19 @@ import Ico_wrap from "../img/ico_wrap.svg";
 import Ico_side from "../img/ico_side.svg";
 import img_bar_yellow from "../img/img_bar_yellow.svg";
 
-const menu = () => {
+const Menu = (props) => {
+  const [selected, setSelected] = useState(0);
+  useEffect(() => {
+    props.setItemsCount(menu_data.length);
+  }, []);
+  useEffect(() => {
+    setSelected(props.changedIndex);
+  }, [props.changedIndex]);
+  useEffect(() => {
+    document.getElementsByClassName("container_menu")[0].scrollLeft =
+      menu_data.length / 2 <= selected ? 117 : 0;
+    props.setIndex(selected);
+  }, [selected]);
   const menu_data = [
     {
       image: Ico_promotion,
@@ -18,7 +30,6 @@ const menu = () => {
       span_class: "span_promotion",
       span_name: "프로모션",
       width: "98px",
-      selected: true,
     },
     {
       image: Ico_morning,
@@ -28,7 +39,6 @@ const menu = () => {
       span_class: "span_morning",
       span_name: "아침메뉴",
       width: "98px",
-      selected: false,
     },
     {
       image: Ico_sandwich,
@@ -38,7 +48,6 @@ const menu = () => {
       span_class: "span_sandwich",
       span_name: "샌드위치",
       width: "98px",
-      selected: false,
     },
     {
       image: Ico_salade,
@@ -48,7 +57,6 @@ const menu = () => {
       span_class: "span_salade",
       span_name: "찹샐러드",
       width: "98px",
-      selected: false,
     },
     {
       image: Ico_wrap,
@@ -58,7 +66,6 @@ const menu = () => {
       span_class: "span_wrap",
       span_name: "랩/기타",
       width: "98px",
-      selected: false,
     },
     {
       image: Ico_side,
@@ -68,37 +75,36 @@ const menu = () => {
       span_class: "span_side",
       span_name: "사이드/음료",
       width: "128px",
-      selected: false,
     },
     {
       image: Ico_side,
       class: "ico_side",
       name: "side",
-      div_class: "div_side",
+      div_class: "div_side2",
       span_class: "span_side",
       span_name: "사이드/음료",
       width: "128px",
-      selected: false,
     },
   ];
 
-  const imageClick = (e) => {
-    console.log("Click " + e);
-  };
+  // const imageClick = (e) => {
+  //   console.log(e);
+  // };
   return (
-    <div>
-      <div className="container_menu">
-        {menu_data.map((data, index) => (
-          <div
-            key={index}
-            className={data.div_class}
-            onClick={() => imageClick(`${data.name}`)}
-          >
-            <div>
-              <img src={data.image} class={data.class} alt={data.class}></img>
-            </div>
-            <span class={data.span_class}>{data.span_name}</span>
-            {data.selected && (
+    <div className="container_menu">
+      {menu_data.map((data, index) => (
+        <div
+          key={index}
+          className={data.div_class}
+          // onClick={() => imageClick(`${data.name}`)}
+          onClick={() => setSelected(index)}
+        >
+          <div>
+            <img src={data.image} className={data.class} alt={data.class}></img>
+          </div>
+          <span className={data.span_class}>{data.span_name}</span>
+          <div className="yellow_bar_div">
+            {selected === index && (
               <img
                 style={{
                   width: data.width,
@@ -110,11 +116,10 @@ const menu = () => {
               ></img>
             )}
           </div>
-        ))}
-      </div>
-      <div class="line_divide"></div>
+        </div>
+      ))}
     </div>
   );
 };
 
-export default menu;
+export default Menu;

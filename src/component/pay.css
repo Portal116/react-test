@@ -1,5 +1,23 @@
 .container_pay {
     position: relative;
     width: 1080px;
+    height: 470px;
+}
+.pay_price {
+    width: 1080px;
+    height: 100px;
+    background-color: #333;
+  }
+.pay_bottom{
+    display: flex;
+}
+.pay_selected {
+    width: 900px;
     height: 370px;
+    background-color: #000;
+}
+.pay_pay {
+    width: 180px;
+    height: 370px;
+    background-color: #f2b700;
 }
