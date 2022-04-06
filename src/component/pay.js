@@ -15,16 +15,15 @@ const Pay = (props) => {
       (total = total + currentItem.price * currentItem.amount),
     0
   );
-  const cancel_items = () => {
+  const cancelItems = () => {
     setSelected([]);
   };
   useEffect(() => {
     if (props.addSelected !== "") {
-      const selectedTemp = selected;
-      for (var i = 0; i < selectedTemp.length; i++) {
-        if (props.addSelected.name === selectedTemp[i].name) {
-          selectedTemp[i].amount += 1;
-          setSelected(() => selectedTemp);
+      for (var i = 0; i < selected.length; i++) {
+        if (props.addSelected.name === selected[i].name) {
+          selected[i].amount += 1;
+          setSelected([...selected]);
           props.setSelected("");
           return;
         }
@@ -37,13 +36,14 @@ const Pay = (props) => {
   }, [props.addSelected]);
 
   const addAmount = (index) => {
-    const selectedTemp = selected;
-    selectedTemp[index].amount += 1;
-    setSelected(() => selectedTemp);
+    console.log(index);
+    selected[index].amount += 1;
+    setSelected([...selected]);
   };
 
   const cancelSelected = (index) => {
-    setSelected(selected.filter((selected) => selected.index !== index));
+    selected.splice(index, 1);
+    setSelected([...selected]);
   };
   const startPay = () => {
     alert("결제완료");
@@ -52,7 +52,12 @@ const Pay = (props) => {
   return (
     <div className="container_pay">
       <div className="pay_price">
-        <span className="cancel_all" onClick={cancel_items}>
+        <span
+          className="cancel_all"
+          onClick={() => {
+            cancelItems();
+          }}
+        >
           전체취소
         </span>
         <span className="order_amount">주문수량</span>
@@ -79,13 +84,13 @@ const Pay = (props) => {
                 src={Ico_plus}
                 className="ico_plus"
                 alt="ico_plus"
-                onClick={addAmount(index)}
+                onClick={() => addAmount(index)}
               />
               <img
                 src={Ico_cancel}
                 className="ico_cancel"
                 alt="ico_cancel"
-                onClick={cancelSelected(index)}
+                onClick={() => cancelSelected(index)}
               />
             </div>
           ))}
